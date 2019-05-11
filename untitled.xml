@@ -1,0 +1,46 @@
+<mashup xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:schemaLocation='http://www.openmashup.org/schemas/v1.0/EMML/../schemas/EMMLPrestoSpec.xsd'
+xmlns='http://www.openmashup.org/schemas/v1.0/EMML'
+xmlns:macro='http://www.openmashup.org/schemas/v1.0/EMMLMacro'
+xmlns:presto='http://www.jackbe.com/v1.0/EMMLPrestoExtensions'
+name='newMashup'>
+  
+  <input name="artista" default="madonna" />
+  <output name='result' type='document' >
+    <records />
+  </output>
+  <variables>
+      <variable name="entrada" type="document" default="" />
+      <variable name="resultado_albums" type="document" />
+  </variables>
+  
+
+  <constructor outputvariable="entrada">
+    <urn:getArtist xmlns:urn="urn:LyricWiki">
+      <artist>
+        {$artista}
+      </artist>
+    </urn:getArtist>
+  </constructor>
+
+  <invoke   name="invoke_3" service="Musiquirri" operation="getArtist" outputvariable="$resultado_albums" inputvariables="entrada" />
+  
+  <foreach items="$resultado_albums//albums/item" variable="ITEM">
+    <display message="nodo = " expr="$ITEM//album/string()"></display>
+    <appendresult outputvariable="$result">
+      <nombre>{$artista}</nombre>
+      <album>{$ITEM//albums/string()}</album>
+      <album>{$ITEM//amazonLink/string()}</album>
+    </appendresult>
+  </foreach>
+  
+  
+  
+  
+  
+  <select inputvariable="$resultado_albums" outputvariable="$result" selectexpr="/*:getArtistResponse/albums/item">
+    <columns>
+      <column>album</column>
+    </columns>
+  </select>
+</mashup>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​

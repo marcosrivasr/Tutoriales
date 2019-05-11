@@ -1,0 +1,25 @@
+#related-posts {
+margin:0;
+text-transform:none;
+height:75%;
+min-height:75%;
+padding-top:5px;
+padding-left:5px; /*  Se puede usar para centrar el contenido */
+}
+
+
+#related-posts a{
+	color:black;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#related-posts  a:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#EE2400), to(#D02100));
+	background: -moz-linear-gradient(top,  #EE2400,  #D02100);
+	color:white;
+}

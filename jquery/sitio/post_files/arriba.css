@@ -1,0 +1,49 @@
+#back-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	padding-top: 50px;
+}
+
+#back-top a {
+	width: 108px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #737373;
+	padding-top: 50px;
+	width: 108px;
+	height: 58px;
+	display: block;
+	margin-bottom: 7px;
+	background: #ddd;
+
+	/* bordes redondeados */
+	-webkit-border-radius: 108px;
+	-moz-border-radius: 108px;
+	border-radius: 108px;
+
+	/* transicion */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	
+
+	/* transicion */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	background-color: #000;
+}
+
+/* Flecha(span tag) */
+#back-top span {
+
+}
+#back-top a:hover span {
+	background-color: #777;
+}

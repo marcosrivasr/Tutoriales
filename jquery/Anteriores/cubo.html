@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.cube {
+  margin: 100px;
+  width:  150px;
+  height: 150px;
+  margin: 100px auto;
+  position: relative;
+  -webkit-perspective : 0px;
+  -moz-perspective    : 0px;
+  -o-perspective      : 0px;
+  -ms-perspective     : 0px;
+  perspective         : 0px;
+
+  -webkit-transform-style : preserve-3d;
+  -moz-transform-style    : preserve-3d;
+  -o-transform-style      : preserve-3d;
+  -ms-transform-style     : preserve-3d;
+  transform-style         : preserve-3d;
+
+  -webkit-transform : rotateX(45deg) rotateY(45deg);
+  -moz-transform    : rotateX(45deg) rotateY(45deg);
+  -0-transform      : rotateX(45deg) rotateY(45deg);
+  -ms-transform     : rotateX(45deg) rotateY(45deg);
+  transform         : rotateX(45deg) rotateY(45deg);
+  
+}
+.cube-face {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+
+  opacity: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing   : border-box;
+  -ms-box-sizing    : border-box;
+  box-sizing        : border-box;
+
+  -webkit-transform-style : preserve-3d;
+  -moz-transform-style    : preserve-3d;
+  -o-transform-style      : preserve-3d;
+  -ms-transform-style     : preserve-3d;
+  transform-style         : preserve-3d;
+
+}
+.cube-face-front {
+  background: #777;
+  -webkit-transform : translateZ(75px);
+  -moz-transform    : translateZ(75px);
+  -o-transform      : translateZ(75px);
+  -ms-transform     : translateZ(75px);
+  transform         : translateZ(75px);
+} 
+.cube-face-back {
+  background: #888;
+  -webkit-transform : translateZ(-75px);
+  -moz-transform    : translateZ(-75px);
+  -o-transform      : translateZ(-75px);
+  -ms-transform     : translateZ(-75px);
+  transform         : translateZ(-75px);
+} 
+.cube-face-left {
+  background: #999;
+  -webkit-transform : translateX(75px) rotateY(90deg);
+  -moz-transform    : translateX(75px) rotateY(90deg);
+  -0-transform      : translateX(75px) rotateY(90deg);
+  -ms-transform     : translateX(75px) rotateY(90deg);
+  transform         : translateX(75px) rotateY(90deg);
+} 
+.cube-face-right {
+  background: #aaa;
+  -webkit-transform : translateX(-75px) rotateY(90deg);
+  -moz-transform    : translateX(-75px) rotateY(90deg);
+  -0-transform      : translateX(-75px) rotateY(90deg);
+  -ms-transform     : translateX(-75px) rotateY(90deg);
+  transform         : translateX(-75px) rotateY(90deg);
+} 
+.cube-face-top {
+  background: #bbb;
+  -webkit-transform : rotateX(90deg) translateZ(75px);
+  -moz-transform    : rotateX(90deg) translateZ(75px);
+  -0-transform      : rotateX(90deg) translateZ(75px);
+  -ms-transform     : rotateX(90deg) translateZ(75px);
+  transform         : rotateX(90deg) translateZ(75px);
+  z-index: 100;
+} 
+.cube-face-bottom {
+  background: #eee;
+  -webkit-transform : rotateX(90deg) translateZ(-75px);
+  -moz-transform    : rotateX(90deg) translateZ(-75px);
+  -0-transform      : rotateX(90deg) translateZ(-75px);
+  -ms-transform     : rotateX(90deg) translateZ(-75px);
+  transform         : rotateX(90deg) translateZ(-75px);
+}
+
+.cuadro{
+  border: solid 1px black;
+  display: inline-block;  
+  margin-bottom: -4px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+	</style>
+</head>
+<body>
+  <div id="controles">
+    <p>X: <input type="number" id="rotX" value="45"></p>
+    <p>Y: <input type="number" id="rotY" value="45"></p>
+    <!--<input type="button" value="v" id="b1">
+    <input type="button" value="^" id="b2">
+    <input type="button" value=">" id="b3">
+    <input type="button" value="<" id="b4">
+  -->
+  </div>
+	<div class="cube">
+    <div class="cube-face  cube-face-front">
+      <div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
+    </div>
+    <div class="cube-face  cube-face-back">
+     <div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
+    </div>
+    <div class="cube-face  cube-face-left">
+     <div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
+    </div>
+    <div class="cube-face  cube-face-right">
+      <div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
+    </div>
+    <div class="cube-face  cube-face-top">
+      <div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
+    </div>
+    <div class="cube-face  cube-face-bottom">
+      <div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div><div class="cuadro"></div>
+    </div>
+    
+ </div>
+
+ <script src="jquery.js"></script>
+ <script>
+  $(function(){
+    var x=0;
+    var y=0;
+    var i=0;
+    var colores = ['red', 'yellow', 'blue', 'green', 'white', 'orange'];
+    $("#rotX").on("change", function(){
+        $(".cube").css("-webkit-transform", "rotateX("+$(this).val()+"deg) rotateY("+$("#rotY").val()+"deg)");
+    });
+    $("#rotY").on("change", function(){
+        $(".cube").css("-webkit-transform", "rotateX("+$("#rotX").val()+"deg) rotateY("+$(this).val()+"deg)");
+    });
+
+  function moveCube(){
+    $(".cube").css("-webkit-transform", "rotateX("+x+"deg) rotateY("+y+"deg)");
+    $(".cube").css("-moz-transform", "rotateX("+x+"deg) rotateY("+y+"deg)");
+    $(".cube").css("-ms-transform", "rotateX("+x+"deg) rotateY("+y+"deg)");
+    $(".cube").css("transform", "rotateX("+x+"deg) rotateY("+y+"deg)");
+  }
+
+  function isThereEmpty(){
+    var n = $(".cuadro").size();    
+    var control = 0;
+
+    for(var i=0; i < n; i++){
+      if($(".cuadro").eq(i).attr("data-color") != colores[0] && $(".cuadro").eq(i).attr("data-color") != colores[1] && $(".cuadro").eq(i).attr("data-color") != colores[2] && $(".cuadro").eq(i).attr("data-color") != colores[3] && $(".cuadro").eq(i).attr("data-color") != colores[4] && $(".cuadro").eq(i).attr("data-color") != colores[5]){
+        control++;
+      }
+    }
+    console.log("vacios " + control);
+    if(control > 0){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  function analizeColors(color){
+    var n = $(".cuadro").size();    
+    var control = 0;
+
+    for(var i=0; i < n; i++){
+      if($(".cuadro").eq(i).attr("data-color") == color){
+        control++;
+      }
+    }
+    //console.log(control);
+    if(control < 9){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  function assignColors(e){
+    var next = colores[(i++)%6];
+    //console.log("next: " + next);
+    if(isThereEmpty()){
+      if(analizeColors(next)==true){
+        e.css("background-color", next);
+        e.attr("data-color", next);
+      }else{
+        assignColors(e);
+      } 
+    }else{
+
+    }
+  }
+    
+
+  $(".cuadro").on("click", function(){
+    assignColors($(this));
+  });
+
+  });
+ </script>
+</body>
+</html>

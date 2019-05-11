@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            Comparaciones abstractas confusas en Javascript
+        */
+
+        // '0' se castea a 0 para comparar números
+        console.log(0 == '0'); // true
+        
+        //[] se castea a 0 para comparar ambos números
+        console.log(0 == []); // true
+
+        // [] se castea a '' para comparar ambos strings
+        // ya que '0' no es igual a '' es falso
+        console.log('0' == []); // false
+
+        // [] se castea a '' y a su vez se castea a 0
+        // dado que true equivale a 1, 0 no es igual a 1
+        console.log([] == true); // false
+
+    
+    </script>
+</body>
+</html>

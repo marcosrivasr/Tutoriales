@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animacion Scroll</title>
+	<style>
+	#container-imagenes{
+		margin-top: 150px;
+		margin-bottom: 200px;
+		width: 1280px;
+		height: 675px;
+	}
+	#container-imagenes img{
+		width: 1200px;
+		display: none;
+	}
+	#container-imagenes img:nth-child(1){
+		display: block;
+	}
+	#container-imagenes #descripcion{
+		color: white;
+		font-family: Helvetica, Arial;
+		font-size: 28px;
+		font-style: italic;
+		position: absolute;
+		margin-top: 100px;
+		padding: 100px;
+	}
+	#container-imagenes #descripcion h2{
+		font-size: 68px;
+		font-weight: bolder;
+		font-style: normal;
+		text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+	}
+	</style>
+</head>
+<body>
+
+	<div id="container-imagenes">
+		<div id="descripcion">
+			<h2>Grand Thef Auto V</h2>
+			<p>El mejor juego de todos los tiempos ha llegado</p>
+		</div>
+		<img src="gta/1.jpg" alt="">
+		<img src="gta/2.jpg" alt="">
+		<img src="gta/3.jpg" alt="">
+		<img src="gta/4.jpg" alt="">
+		<img src="gta/5.jpg" alt="">
+		<img src="gta/6.jpg" alt="">
+		<img src="gta/7.jpg" alt="">
+		<img src="gta/8.jpg" alt="">
+		<img src="gta/9.jpg" alt="">
+		<img src="gta/10.jpg" alt="">
+		<img src="gta/11.jpg" alt="">
+		<img src="gta/12.jpg" alt="">
+		<img src="gta/13.jpg" alt="">
+		<img src="gta/14.jpg" alt="">
+		<img src="gta/15.jpg" alt="">
+		<img src="gta/16.jpg" alt="">
+		<img src="gta/17.jpg" alt="">
+		<img src="gta/18.jpg" alt="">
+		<img src="gta/19.jpg" alt="">
+		<img src="gta/20.jpg" alt="">
+		<img src="gta/21.jpg" alt="">
+		<img src="gta/22.jpg" alt="">
+		<img src="gta/23.jpg" alt="">
+		<img src="gta/24.jpg" alt="">
+		<img src="gta/25.jpg" alt="">
+		<img src="gta/26.jpg" alt="">
+		<img src="gta/27.jpg" alt="">
+		<img src="gta/28.jpg" alt="">
+		<img src="gta/29.jpg" alt="">
+		<img src="gta/30.jpg" alt="">
+		<img src="gta/31.jpg" alt="">
+		<img src="gta/32.jpg" alt="">
+		<img src="gta/33.jpg" alt="">
+		<img src="gta/34.jpg" alt="">
+		<img src="gta/35.jpg" alt="">
+		<img src="gta/36.jpg" alt="">
+		<img src="gta/37.jpg" alt="">
+		<img src="gta/38.jpg" alt="">
+		<img src="gta/39.jpg" alt="">
+	</div>
+	<script src="jquery.js"></script>
+	<script>
+		var i=0;
+		$(document).on("ready", function(){
+			$(window).scroll(function(e){
+				if($(this).scrollTop() < 450){
+					$("#container-imagenes img").hide();
+					$("#container-imagenes img").eq(Math.abs($(this).scrollTop()/10 % 39)).show();
+				}
+			});
+		});
+	</script>
+</body>
+</html>

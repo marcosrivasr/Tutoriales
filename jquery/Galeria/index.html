@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Galería de imágenes</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="main-container">
+
+		<div id="galeria">
+
+			<div id="controles">
+				<div class="numeros">1 / 10</div>
+				<div class="botones">
+					<a href="#" class="prev">Anterior</a>
+
+					<a href="#" class="next">Siguiente</a>
+				</div>
+			</div>
+
+			<div id="imagenes">
+
+				<div class="imagen">
+					<img src="img/imagen01.jpg" alt="" width="400">
+					<div class="descripcion">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui labore, aliquid dignissimos quia non rem cupiditate porro provident eos ad, repellat natus architecto, necessitatibus a, iste obcaecati. Culpa, nostrum.
+					</div>
+				</div><div class="imagen">
+
+					<img src="img/imagen02.jpg" alt="" width="400">
+					<div class="descripcion">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui labore, aliquid dignissimos quia non rem cupiditate porro provident eos ad, repellat natus architecto, necessitatibus a, iste obcaecati. Culpa, nostrum.
+					</div>
+				</div><div class="imagen">
+
+					<img src="img/imagen03.jpg" alt="" width="400">
+					<div class="descripcion">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui labore, aliquid dignissimos quia non rem cupiditate porro provident eos ad, repellat natus architecto, necessitatibus a, iste obcaecati. Culpa, nostrum.
+					</div>
+				</div><div class="imagen">
+					<img src="img/imagen04.jpg" alt="" width="400">
+					<div class="descripcion">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui labore, aliquid dignissimos quia non rem cupiditate porro provident eos ad, repellat natus architecto, necessitatibus a, iste obcaecati. Culpa, nostrum.
+					</div>
+				</div><div class="imagen">
+					<img src="img/imagen05.jpg" alt="" width="400">
+					<div class="descripcion">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui labore, aliquid dignissimos quia non rem cupiditate porro provident eos ad, repellat natus architecto, necessitatibus a, iste obcaecati. Culpa, nostrum.
+					</div>
+				</div><div class="imagen">
+					<img src="img/imagen06.jpg" alt="" width="400">
+					<div class="descripcion">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed qui labore, aliquid dignissimos quia non rem cupiditate porro provident eos ad, repellat natus architecto, necessitatibus a, iste obcaecati. Culpa, nostrum.
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script src="jquery.js"></script>
+	
+	<script>
+
+		$(function(){
+
+			var control = 0;
+			var mul 	= $(".imagen").width();
+			var n       = $("#imagenes .imagen").size();
+
+			$("#controles  .numeros").text((control + 1) + " / " + n);
+
+			$(".next").on("click", function(){
+				if((Math.abs(control) == (n-1))){
+					return false;
+				}
+
+				control--;
+				$("#controles  .numeros").text((Math.abs(control) + 1) + " / " + n);
+				//$("#imagenes").css("margin-left", (control * mul) + "px" );
+				$("#imagenes").animate({
+					"margin-left": (control * mul) + "px"
+				});
+
+				return false;
+			});
+
+			$(".prev").on("click", function(){
+				if(Math.abs(control) == 0){
+					return false;
+				}
+
+				control++;
+				$("#controles  .numeros").text((Math.abs(control - 1)) + " / " + n);
+				$("#imagenes").animate({
+					"margin-left": (control * mul) + "px"
+				});
+				return false;
+			});
+
+			
+		});
+
+	</script>
+
+
+
+
+
+
+
+</body>
+</html>

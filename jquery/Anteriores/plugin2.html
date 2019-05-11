@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="blog"></div>
+	<script src="jquery.js"></script>
+	<script src="blog.js"></script>
+	<script>
+		$(document).on("ready", function(){
+			$("#blog").blogRSS("http://www.vidamrr.com/feeds/posts/default/-/sitios%20web?max-results=5&orderby=published&alt=json-in-script&callback=?");		
+		});
+	
+	</script>
+</body>
+</html>

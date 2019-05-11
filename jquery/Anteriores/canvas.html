@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	</style>
+</head>
+<body>
+
+	<canvas id="lienzo" width="500" height="440"></canvas>
+	<script src="jquery.js"></script>
+	<script>
+	// y = v0  * t + 1/2 a*tt
+$(function(){
+	var i;
+	var lienzo;
+	var contexto
+	var tiempo;
+	var gravedad = 5;
+	var swidth = 800;
+	var sheight = 600;
+	var arregloBolitas=[];
+	$("#lienzo").on("click", function(e){
+		console.log(e.pageX + " " + e.pageY);
+	})
+	function Bolita(x, y, color){
+		this.x = x;
+		this.y = y;
+		this.v0 = 10;
+		this.color = color;	
+		this.tiempo = 0;
+		this.dibujar = function(){
+			this.tiempo++;
+			if(this.y < 400){
+				this.y = this.v0  * this.tiempo + 1/2 * gravedad*this.tiempo*this.tiempo;
+				console.log(this.y);
+			}
+			contexto.beginPath();
+			contexto.arc(this.x, this.y,10,0,2*Math.PI);
+			contexto.fillStyle = this.color;
+			contexto.fill();
+		}
+	}
+
+	function init(){
+		i = 50;	
+		lienzo = document.getElementById("lienzo");
+		contexto = lienzo.getContext("2d");	
+		if(tiempo == undefined){
+			tiempo = setInterval(update, 1000/24);
+		}else{
+			clearInterval(tiempo);
+		}
+		for(var i=0; i<1; i++){
+			var randomx = Math.floor(Math.random()* 400);
+			var randomy = Math.floor(Math.random()* 400);
+			arregloBolitas.push(new Bolita(randomx, randomy, "#ff0000"));
+		}
+		
+	}
+
+	function dibujarFondo(){
+		contexto.fillStyle = "#eee";
+		contexto.fillRect(0,0, swidth, sheight);
+	}
+	function dibujarCirculo(){
+		contexto.beginPath();
+		contexto.arc(i,75,40,0,2*Math.PI);
+		contexto.stroke();	
+	}
+	
+	
+	function update(){
+		// x, y, radio, angulo inicial, angulo final
+		i+=10;
+		dibujarFondo();
+		
+		for(var x =0; x < arregloBolitas.length; x++){
+			var c = arregloBolitas[x];
+			c.dibujar();
+		}
+	}
+
+	init();
+});
+
+	</script>
+</body>
+</html>

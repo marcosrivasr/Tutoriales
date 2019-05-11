@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX</title>
+	<style>
+		#botones{
+			margin-top: 100px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		a{
+			background-color: #003366;
+			color: white;
+			padding: 10px 15px;
+			text-decoration: none;
+		}
+		#capa{
+			margin: 10px auto;
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div id="botones">
+		<a href="#" id="botonMS">Microsoft</a>	
+		<a href="#" id="botonGoogle">Google</a>	
+		<a href="#" id="botonApple">Apple</a>	
+	</div>
+	
+	<div id="capa">
+	</div>
+<script src="jquery.js"></script>
+<script>
+	$(document).on("ready", main);
+
+	function cargarNota(url){
+		$("#capa").text("Cargando..");
+		$("#capa").load(url);
+	}
+	function main(){
+		$("#botonMS").on("click", function(){
+			cargarNota("https://dl.dropboxusercontenta.com/u/43775522/tutoriales/ajax/microsoft.html");
+		});
+		$("#botonApple").on("click", function(){
+			cargarNota("https://dl.dropboxusercontent.com/u/43775522/tutoriales/ajax/apple.html");
+		});
+		$("#botonGoogle").on("click", function(){
+			cargarNota("https://dl.dropboxusercontent.com/u/43775522/tutoriales/ajax/google.html");
+		});
+	}
+	
+</script>
+</body>
+</html>

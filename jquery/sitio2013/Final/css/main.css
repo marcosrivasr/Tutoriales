@@ -1,0 +1,401 @@
+/*************** BODY ****************/
+*{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html,body{
+	background-color: #F2F0DF;
+	font-family: Helvetica, Verdana;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+}
+/*************** MENU ****************/
+#menu-container{
+	background-color: #222;
+	height: 100%;
+	position: fixed;
+	text-align: center;
+	width: 200px;
+}
+#menu-container #logo-menu{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+#menu-container #logo-menu #titulo-sitio{
+	color: #eee;
+	font-size: 14px;
+	padding-top: 10px;
+}
+#menu-container #logo-menu #descripcion-sitio{
+	color: #bbb;
+	font-size: 10px;
+	padding-top: 10px;
+}
+#menu-container #menu{
+	border-top: solid 1px #999; 
+	border-bottom: solid 1px #444; 
+	margin: 0;
+	padding: 40px 0;
+}
+#menu-container #menu li{
+	list-style: none;
+	margin: 0;
+	padding: 10px 0;
+}
+#menu-container #menu li a{
+	color: #FCB95B;
+	text-decoration: none;
+}
+#menu-container #menu li a:hover{
+	color: #F5DFCE;
+}
+
+/********** MAIN CONTAINER ***********/
+#main-container{
+	overflow: hidden;
+	width: 3275px;
+	padding: 0 0 0 200px;
+}
+#main-container .seccion{
+	background-color: #F2F0DF;
+	border-right: dotted 1px #aaa;
+	display: inline-block;
+	height: 600px;
+	margin-left: -4px;
+	padding: 20px;
+	vertical-align: top;
+	width: 500px;
+
+	overflow: hidden;
+	overflow-y:scroll;
+}
+#main-container .seccion h2{
+	border-bottom: solid 1px #ccc;
+	padding-bottom: 30px;
+}
+
+#seccion-inicio{
+	padding-top: 100px !important;
+	text-align: center;
+}
+#seccion-inicio #descripcion-inicio{
+	color: #555;
+	font-size: 20px;
+	font-style: italic;
+	margin: auto;
+	width: 90%;
+}
+#separador, .separador{
+	background-image: url(../img/separador.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100px;
+}
+/*===========================================
+	SECCION BLOG
+=============================================*/
+p{
+	font-size: 14px;
+	line-height: 26px;
+	margin-top: -5px;
+}
+#posts a {
+    color: black;
+}
+.feed-icon{
+	float: left;
+	padding-right: 10px;
+}
+.rss-container {
+	border-bottom: dotted 2px #E0DECA;
+    padding: 10px 10px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.rss-container:hover {
+    background-color: #E0DECA;
+}
+.rss-container img {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+}
+.rss-container h3 {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top;
+    width: 350px;
+}
+
+
+/*===========================================
+	SECCION TRABAJO
+=============================================*/
+#slider-miniaturas{
+	display: inline-block;
+	
+}
+#slider-miniaturas img{
+	display: none;
+}
+#slider-miniaturas img:nth-child(1){
+	display: block;
+}
+#descripcion-trabajo{
+	padding-top: 20px;
+}
+
+
+#trabajos-container{}
+#trabajos-container a{
+	color: white;
+	text-decoration: none;
+}
+#trabajos-container a .trabajo.acuarela{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion1-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+
+#trabajos-container a .trabajo.tinta{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion2-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.abecedario{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion3-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.dragones{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion4-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.dulces{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion5-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.retratos{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion6-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.revistas{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion7-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.sitiowww{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion8-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.city{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion9-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.influencia{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion10-1.png);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+
+#trabajos-container a .trabajo.luces{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion11-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.libros{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion12-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.flat{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion13-1.png);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+#trabajos-container a .trabajo.rostroscolor{
+	background: url(../img/fondo-trabajo.png), url(../img/trabajo/coleccion14-1.jpg);
+	background-position: center center, 0 0;
+	background-size: 100%;
+}
+
+#trabajos-container a .trabajo{
+	border: solid 5px white;
+	height: 150px;
+	margin-bottom: 10px;
+	padding: 100px 10px 10px 10px;
+	width: 450px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#trabajos-container a .trabajo:hover{
+	background-position: center center, center center;
+}
+
+#trabajos-container a .trabajo .titulo{
+	font-family:  'Ubuntu Mono', sans-serif;
+	font-weight: lighter;
+	font-size: 20px;
+}
+
+#colecciones-container{
+	background: rgba(0,0,0,0.7);
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+#colecciones-container a{
+	color: black;
+	text-decoration: none;
+}
+#colecciones-container a:hover{
+	color: #FCB95B;
+}
+
+#colecciones-container .coleccion-container{
+	margin: 20px auto;
+	width: 700px;
+}
+#colecciones-container .galeria{
+	display: inline-block;
+	margin: 0 auto;
+	width: 400px;
+	text-align: center;
+	vertical-align: top;
+}
+#colecciones-container .galeria img{
+	width: 400px;
+	display: block;
+}
+#colecciones-container .galeria img:nth-child(1){
+	
+}
+#colecciones-container .descripcion{
+	background: white;
+	display: inline-block;
+	font-size: 12px;
+	width: 295px;
+	margin-left: -5px;
+	vertical-align: top;
+	padding: 20px;
+}
+#colecciones-container .descripcion .controles{
+	margin-top: 20px;
+	text-align: center;
+}
+#colecciones-container .descripcion .controles a{
+	color: black;
+	padding: 10px 15px;
+}
+#colecciones-container .descripcion .controles a:hover{
+	color: #FCB95B;
+}
+#colecciones-container .descripcion .cerrar{
+	margin-top: 20px;
+	text-align: center;
+}
+#colecciones-container .descripcion .cerrar a{
+	background: url(../img/close.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 32px;
+	padding: 10px 28px;
+}
+
+/*===========================================
+	SECCION ACERCA
+=============================================*/
+
+#seccion-acerca #foto-autor{
+	text-align: center;
+}
+#seccion-acerca #foto-autor img{
+	border-radius: 100%;
+}
+#seccion-acerca #foto-autor #descripcion-inicial{
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 16px;
+	padding-top: 15px;
+}
+
+#acordeon-container{}
+#acordeon-container .tab{
+	border-bottom: solid 1px #ccc;
+}
+#acordeon-container .tab .titulo{
+	background-image: url(../img/arrow-up.png);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 20px 10px;
+}
+#acordeon-container .tab .titulo:hover{
+	background-color: #E0DECA;
+}
+#acordeon-container .tab .contenido{
+	display: none;
+	padding: 20px 10px;
+}
+#acordeon-container .tab-activa{
+	background-color: #E0DECA;	
+}
+
+/*===========================================
+	SECCION CONTACTO
+=============================================*/
+#seccion-contacto{
+	background-image: url(../img/mail.png);
+	background-repeat: no-repeat;
+	background-size: 128px;
+	background-position: top right;
+}
+#seccion-contacto #redes-sociales{
+	text-align: center;
+}
+#formulario form{
+	margin: 0 auto;
+	padding: 20px;
+	width: 400px;
+}
+#formulario form div{
+	padding: 20px 0;
+}
+#formulario form input, textarea{
+	border: solid 1px #ccc;
+	outline: none;
+	padding: 10px 15px;
+	width: 100%;
+}
+#formulario .boton{
+	background-color: #1586E8;
+	border: 0;
+	border-radius: 3px;
+	color: white;
+}
+#formulario .boton:hover{
+	background-color: #1064AD;
+}
+
+

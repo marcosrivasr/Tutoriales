@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Creación de un Plugin</title>
+	<style>
+		body{
+			background-color: #2C72B0;	
+		}
+		#container{
+			margin: 100px auto;
+			text-align: center;
+		}
+		.slider{
+			display: inline-block;
+			padding: 10px;
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="capa">
+			<img src="imagen.jpg" alt="">
+		</div>
+		<div id="capa2">
+			<img src="david.jpg" alt="">
+		</div>
+	</div>
+	
+	<script src="jquery.js"></script>
+	<script src="jquery.escalar.js"></script>
+	<script>
+	$(document).on("ready", main);
+
+	function main(){
+		$("#capa").escalar();
+		$("#capa2").escalar();
+
+	}
+	</script>
+
+</body>
+</html>
+
+
+
+
+

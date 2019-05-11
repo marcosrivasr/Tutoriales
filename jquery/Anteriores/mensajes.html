@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mensajes con CSS</title>
+	<link href='http://fonts.googleapis.com/css?family=Londrina+Solid' rel='stylesheet' type='text/css'>
+	<style>
+*,body, html{
+box-sizing: border-box;
+font-family: Verdana, Arial;
+padding: 0;
+margin: 0;
+}
+body{
+background-color: #EDCEA1;
+}
+.etiqueta{
+	background-color: black;
+	padding: 10px;
+	text-align: center;
+}
+.etiqueta:hover{
+	background-color: #FF9B29;
+}
+
+.home{
+	color: white;
+	text-decoration: none;
+	width: 100%;
+}
+#titulo{
+	font-size: 30px;
+	font-family: 'Londrina Solid', cursive;
+	padding: 10px;
+	text-align: center;
+}
+
+
+
+#chat{
+	background-color: #eee;
+	margin: 20px auto 0;
+	width: 400px;
+}
+#chat #header-chat{
+	background-color: #555;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+#caja-mensaje{
+	background-color: #A8DCF7;
+	margin: 0 auto;
+	padding: 10px;
+	width: 400px;
+}
+#caja-mensaje input{
+	border: solid 1px #4193BF;
+	outline: none;
+	padding: 10px;
+	width: 310px;
+}
+#caja-mensaje button{
+	border: 0;
+	background-color: #4193BF;
+	color: white;
+	font-size: 16px;
+	padding: 8px;
+	width: 50px;
+}
+
+
+#chat #mensajes{
+	padding: 10px;
+	height: 400px;
+	width: 400px;
+	overflow: hidden;
+	overflow-y: scroll 
+}
+
+#chat #mensajes .mensaje-autor{
+	margin-bottom: 50px;
+
+}
+#chat #mensajes .mensaje-autor img, #chat #mensajes .mensaje-amigo img{
+	display: inline-block;
+	vertical-align: top;
+}
+#chat #mensajes .mensaje-autor .contenido{
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+	display: inline-block;
+	font-size: 13px;
+	padding: 15px;
+	vertical-align: top;
+	width: 280px;
+}
+#chat #mensajes .mensaje-autor .fecha{
+	color: #777;
+	font-style: italic;
+	font-size: 13px;
+	text-align: right;
+	margin-right: 35px;
+	margin-top: 10px;
+}
+#chat #mensajes .mensaje-autor .flecha-izquierda{
+	display: inline-block;
+	margin-right: -6px;
+	margin-top: 10px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-right: 15px solid white;
+}
+
+
+
+
+
+
+
+
+
+#chat #mensajes .mensaje-amigo{
+	margin-bottom: 50px;
+}
+#chat #mensajes .mensaje-amigo .contenido{
+	background-color: #3990BF;
+	border-radius: 5px;
+	color: white;
+	display: inline-block;
+	font-size: 13px;
+	padding: 15px;
+	vertical-align: top;
+	width: 280px;
+}
+#chat #mensajes .mensaje-amigo .flecha-derecha{
+	display: inline-block;
+	margin-left: -6px;
+	margin-top: 10px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #3990BF;
+}
+#chat #mensajes .mensaje-amigo img, #chat #mensajes .mensaje-autor img{
+	border-radius: 5px;
+}
+#chat #mensajes .mensaje-amigo .fecha{
+	color: #777;
+	font-style: italic;
+	font-size: 13px;
+	text-align: left;
+	
+	margin-top: 10px;
+}
+
+	</style>
+</head>
+<body>
+	
+	<a class="home" href="http://www.vidamrr.com">
+		<div class="etiqueta">
+			Volver al blog Vida MRR
+		</div>
+	</a>
+	<div id="container">
+		<div id="titulo">
+			Interfaz de Chat con sólo CSS
+		</div>
+<div id="chat">
+	<div id="header-chat">
+		Jennifer Love Hewitt (Activo ahora...)
+	</div>
+	<div id="mensajes">
+		<div class="mensaje-autor">
+			<img src="foto.jpeg" alt="" class="foto">
+			<div class="flecha-izquierda"></div>
+			<div class="contenido">
+				Hola mi Jenny!!! Cómo estás??
+			</div>
+			<div class="fecha">Enviado hace cuatro minutos</div>
+		</div>
+
+		<div class="mensaje-amigo">
+			<div class="contenido">
+				Jajaja que onda señor Rivas, como está?? <br />
+				Yo estoy muy bien, cansada como siempre por la serie jeje :/
+			</div>
+			<div class="flecha-derecha"></div>
+			<img src="foto2.jpeg" alt="" class="foto">
+			<div class="fecha">Enviado hace tres minutos</div>
+		</div>
+		<div class="mensaje-autor">
+			<img src="foto.jpeg" alt="" class="foto">
+			<div class="flecha-izquierda"></div>
+			<div class="contenido">
+				No bueno, me imagino jaja y que tal tu día?
+			</div>
+			<div class="fecha">Enviado hace dos minutos</div>
+		</div>
+
+		<div class="mensaje-amigo">
+			<div class="contenido">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, non, modi, vitae, praesentium amet voluptates quia nam placeat veritatis quibusdam tempora commodi ab quam neque velit suscipit similique laudantium perferendis.
+			</div>
+			<div class="flecha-derecha"></div>
+			<img src="foto2.jpeg" alt="" class="foto">
+			<div class="fecha">Enviado hace 1 minuto</div>
+		</div>
+
+		<div class="mensaje-autor">
+			<img src="foto.jpeg" alt="" class="foto">
+			<div class="flecha-izquierda"></div>
+			<div class="contenido">
+				Eres una loquilla :P
+			</div>
+			<div class="fecha">Enviado hace un momento</div>
+		</div>
+
+		
+
+	</div>
+
+		
+
+
+</div>
+<div id="caja-mensaje">
+	<input type="text" placeholder="Escribir mensaje...">
+	<button>&#8594; </button>
+</div>
+	</div>
+</body>
+</html>

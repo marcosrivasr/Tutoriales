@@ -1,0 +1,21 @@
+body{
+	background-color: #A1D490;
+	font-size: 1.7em;
+	font-family: Arial;
+}
+#main-container{
+	background-color: white;
+	padding: 20px 20px;
+	margin: 90px auto;
+	width: 700px;
+}
+
+ul{
+	font-size: 0.5em;
+	color: #999;
+}
+input{
+	padding: 10px 15px;
+	font-size: 1em;
+	outline: none;
+}

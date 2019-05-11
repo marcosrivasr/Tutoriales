@@ -1,0 +1,70 @@
+/*
+	BG 3B3B3B
+	link 2E70B8
+	link:hover B85C2E
+
+*/
+body{
+	background-color: #3B3B3B;
+	font-family: Arial;
+	padding: 0;
+	margin: 0;
+}
+
+#main-container{
+	margin: 50px auto;
+	width: 400px;
+}
+
+#galeria{
+	background-color: white;
+	overflow: hidden;
+}
+
+#galeria #controles{
+	text-align: center;
+	padding: 10px 0;
+}
+#galeria #controles a{
+	color: #2E70B8;
+	display: inline-block;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+#galeria #controles a:hover{
+	color: #B85C2E;
+}
+
+#galeria #imagenes{
+	width: 2400px;
+}
+
+#galeria #imagenes .imagen{
+	display: inline-block;
+	vertical-align: top;
+	width: 400px;
+}
+
+#galeria #imagenes .imagen .descripcion{
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	padding: 10px;
+
+	position: relative;
+	margin-top: -125px; 
+	height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

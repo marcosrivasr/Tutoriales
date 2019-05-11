@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			color: white;
+			background-color: #333;
+		}
+		#formulario{
+			margin: 100px auto;
+			padding: 20px;
+			width: 200px;
+		}
+	</style>
+	<script src="jquery.js"></script>
+	<script>
+		var a =0;
+		$(document).on("ready", function(){
+			$("#bEnviar").on("click", function(){
+				var nombre = $("#tfNombre").val();
+				var pass   = $("#tfPass").val();
+				var clave  = $("#tfClave").val();
+				a+=1;
+				console.group("PROCESO DE VALIDACION");
+				console.log("Valor de variable a: " + a);
+				if(nombre == "" || pass ==""){
+					// IMPLEMENTACION...
+					console.error("nombre o contraseña no introducida");
+				}else{
+					if(pass.length < 6){
+						// IMPLEMENTACION...
+						console.warn("La contraseña es menor de 6 caracteres");
+					}
+				}
+				if(clave == ""){
+					// IMPLEMENTACION...
+					console.warn("No se introdujo clave");
+				}else{
+					console.log("clave introducida");
+				}
+				console.groupEnd();
+				console.log("Otro procesamiento...");
+				// SHALA LA SHALA LA...
+			});
+		});
+	</script>
+	<script>
+	</script>
+</head>
+<body>
+	<div id="formulario">
+		<p>*Nombre: <br /><input type="text" id="tfNombre"></p>
+		<p>*Contraseña: <br /><input type="password" id="tfPass"></p>
+		<p>Palabra clave: <br /><input type="text" id="tfClave"></p>
+		<button id="bEnviar">Enviar</button>
+	</div>
+</body>
+</html>

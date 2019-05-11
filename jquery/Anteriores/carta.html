@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Efecto de carta que se gira 3D</title>
+	<style>
+*{
+	box-sizing: border-box;
+}
+#container{
+	margin: 100px auto;
+	width: 860px;
+}
+.carta-container {
+	display: inline-block;
+	height: 250px;
+	margin: 10px;
+	position: relative;
+	width: 250px;
+	z-index: 1;
+}
+.carta-container {
+  	-webkit-perspective: 800;
+}
+.carta {
+	box-shadow: 0px 0px 5px black;
+	height: 100%;
+	width: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 0.5s;
+}
+.carta-container:hover .carta{
+	-webkit-transform: rotateY(180deg);
+}
+.carta .lado{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	-webkit-backface-visibility: hidden;
+}
+.carta .frente{
+	background-color: black;
+	height: 100%;
+	width: 100%;
+}
+.carta .atras{
+	background: #F0F0F0;
+	font-family: Helvetica, Verdana, Arial;
+	height: 100%;
+	width: 100%;
+	-webkit-transform: rotateY(180deg);
+}
+
+
+.carta .atras .header{
+	padding: 14px 5px;
+	text-align: center;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+.daft{
+	background: url(daft.jpg);
+	color: white;
+}
+.pink{
+	background: url(pink.jpg);
+	color: white;
+}
+.david{
+	background: url(david.jpg);
+	color: white;
+}
+.carta .atras ul{
+	padding: 0;
+	margin: 0;
+}
+.carta .atras ul li{
+	cursor: pointer;
+	font-size: 12px;
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+}
+.carta .atras ul li:hover{
+	background-color: #2AC92D;
+	color: white;
+}
+.derecha{
+	width: 0; 
+	height: 0; 
+	border-top: 0 solid green;
+	border-bottom: 60px solid transparent;
+	
+	border-left: 60px solid green;
+}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="derecha"></div>
+		<div class="carta-container">
+			<div class="carta">
+				<div class="lado frente">
+					<img src="daft.jpg" alt="">
+				</div>
+				<div class="lado atras">
+					<div class="header daft">
+						Daft Punk - RAM
+					</div>
+					<ul>
+						<li>Give Life Back to Music</li>
+						<li>Giorgio by Moroder</li>
+						<li>Instant Crush</li>
+						<li>Touch</li>
+						<li>Get Lucky</li>
+						<li>Motherboard</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+
+		<div class="carta-container">
+			<div class="carta">
+				<div class="lado frente">
+					<img src="david.jpg" alt="">
+				</div>
+				<div class="lado atras">
+					<div class="header david">
+						David Guetta - Nothing But...
+					</div>
+					<ul>
+						<li>Where Them Girls At</li>
+						<li>Little Bad Girl</li>
+						<li>Turn Me On</li>
+						<li>Sweat (remix)</li>
+						<li>Without U</li>
+						<li>Nothing Really Matters</li>
+					</ul>
+				</div>	
+			</div>
+		</div>	
+
+		<div class="carta-container">
+			<div class="carta">
+				<div class="lado frente">
+					<img src="pink.jpg" alt="">
+				</div>
+				<div class="lado atras">
+					<div class="header pink">
+						Pink - Truth about love
+					</div>
+					<ul>
+						<li>Are We All We Are</li>
+						<li>Blow Me (One Last Kiss)</li>
+						<li>Try</li>
+						<li>Just Give Me a Reason</li>
+						<li>True Love</li>
+						<li>How Come You're Not Here</li>
+					</ul>
+				</div>	
+			</div>
+		</div>	
+
+	</div>
+	
+
+</body>
+</html>
