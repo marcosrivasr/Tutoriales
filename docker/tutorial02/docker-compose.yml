@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  products:
+    build: ./products
+    volumes:
+      - ./products:/usr/src/app
+    ports:
+      - 5001:80
+  website:
+    image: php:apache
+    volumes:
+      - ./website:/var/www/html
+    ports:
+      - 5000:80
+    depends_on:
+      - products
+
+  db:
+    image: mysql
+    container_name: database
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
