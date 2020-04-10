@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Hola a todos
+
+    <div id="token"></div>
+    <div id="msg"></div>
+    <div id="notis"></div>
+    <div id="err"></div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+        MsgElem   = document.getElementById("msg")
+        TokenElem = document.getElementById("token")
+        NotisElem = document.getElementById("notis")
+        ErrElem   = document.getElementById("err")
+        // Initialize Firebase
+        // TODO: Replace with your project's customized code snippet
+        var config = {
+          apiKey: "AIzaSyAAe70474_Ukz_hdZ1nkZ2h-g2MyObz3wg",
+          authDomain: "plantitas-f8d9a.firebaseapp.com",
+          databaseURL: "https://plantitas-f8d9a.firebaseio.com",
+          projectId: "plantitas-f8d9a",
+          storageBucket: "",
+          messagingSenderId: "394237423721",
+          appId: "1:394237423721:web:bdf6a970a5b5e848c172f8"
+        };
+        firebase.initializeApp(config);
+
+        const messaging = firebase.messaging();
+        messaging
+            .requestPermission()
+            .then(function () {
+                MsgElem.innerHTML = "Notification permission granted." 
+                console.log("Notification permission granted.");
+
+                // get the token in the form of promise
+                return messaging.getToken()
+            })
+            .then(function(token) {
+                TokenElem.innerHTML = "token is : " + token
+            })
+            .catch(function (err) {
+                ErrElem.innerHTML =  ErrElem.innerHTML + "; " + err
+                console.log("Unable to get permission to notify.", err);
+            });
+
+        messaging.onMessage(function(payload) {
+            console.log("Message received. ");
+            console.log(payload.data.notification);
+            const options = JSON.parse(payload.data.notification);
+            NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload) 
+
+            var n = new Notification(options.title, {
+                body: options.body
+            });
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        fetch('https://fcm.googleapis.com/fcm/send',
+        {
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json',
+                'Authorization': 'key=AAAAW8phsGk:APA91bF59xtkh0Suv__iRcdsqTkuVTF18k8cSCIUook5gaSE31GXbZdWVE0erGRr0xtW7UtZUfEs4qDt4Ma-jcTNyeFSWgAwVgJaEYPzhj69EgmtI8ayoZ5BFrgprL4FT69w5A3pGrse'
+            },
+            body: JSON.stringify({
+                "data": {
+                    "notification": {
+                        "title": "Recordatorio de riego",
+                        "body": "hoy tienes que regar los girasolesss",
+                        "icon": "/itwonders-web-logo.png",
+                    } 
+                },
+                "to": " eCOD8j5yiUg:APA91bFECJ_y0vQ_De102B97wfE-rKlxevyMLOvJEgzJw3by75O6sreYB-60dLmf-MGuyIlxGwe2eLKLMYjl9tHWJsQSM0VEUrGhkvwOBkDLy2p-wpO3yxgYlxOzv8yVBgWK_LQ_pSL7"
+                })
+        })
+        .then(res => res.text())
+        .then(data => console.log(data))
+        .catch(err => console.error(err));
+    </script>
+</body>
+</html>

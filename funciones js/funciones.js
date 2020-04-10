@@ -13,6 +13,8 @@ const resta = function(x, y){
     return x - y;
 }
 
+
+
 resta(5, 7);
 suma(8, 10);
 

@@ -12,35 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Especificidad</title>
-    <style>
-        
-        div p span a:hover{color: red;} /* (0,0,1,4) */
 
-        #bienvenida span a:hover{color: pink;} /* (0,1,1,4) */
-
-        .section span a:hover{color: yellow;} /* (0,0,2,2) */
-
-        
-
-
-
-        #bienvenida .subsection{background-color: tomato;} /* (100+10) */
-
-        div div.subsection{background-color: violet;} /* (2) */
-        
-    </style>
 </head>
 <body>
-
-    <div class="section" id="bienvenida">
-        <p>
-            Este es un párrafo <span><a href="#">Link</a></span>
-        </p>
-        <div class="subsection" id="comentarios">
-            <div class="comentario">
-                Este es un comentario
-            </div> 
-        </div>
-    </div>
+    <img src="" id="foto" />
+    <script src="main.js"></script>
 </body>
 </html>
