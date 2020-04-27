@@ -1,0 +1,43 @@
+1. en la terminal ingresamos
+npm intit --yes (los guiones van junto al yes)
+ESTO CREA EN PACKAGE.JSON
+______________________________________________________________________________________________
+
+2. Instalar express
+npm install express mysql express-myconnection morgan ejs
+
+EXPRESS - 		FRAMEWORK DE NODEJS
+MYSQL - 		CONEXION A BD SERVIDOR
+EXPRESS-MYCONNEXION - 	USAR MYSQL EN EXPRESS
+MORGAN - 		CONOCER LAS PETICIONES QUE SE HACEN AL SERVIDOR
+EJS -			MOTOR DE PLANITLLA PARA ENVIAR HTML Y SE LEAN EN EL SERVIDOR, ESTO 
+			PARA PRIMERO PROCESARLO Y LUEGO ENVIARLO AL CLIENTE
+__________________________________________________________________________________________________
+
+3. se crea la carpeta de src con el archivo app.js = index
+__________________________________________________________________________________________________
+
+4. ejecutar en terminal
+node src/app.js
+
+** control c para salir y luego installar nodemosn para que solo se actualice
+__________________________________________________________________________________________________
+
+5. Instalar en terminal nodemon , Reinicia el servidor cada que exista un cambio
+npm install nodemon -D
+_________________________________________________________________________________
+
+6. seguimos configurando app.js
+___________________________________________________________________________________
+
+7. en la terminal colocamos
+nodemon src/app.js
+_________________________________________________________________________________________
+8. ya que instalo nodemon, abrimos el archivo package.json, eliminamos lo que esta dentro de "scripts", 
+en la parte de arriba y colocamos de forma manual
+ "dev": "nodemon src/app.js"
+esto para que en la terminal solo pongamos
+npm run dev
+________________________________________________________________________________________________
+
+9. creamos la carpeta views para las vistas

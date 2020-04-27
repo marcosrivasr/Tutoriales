@@ -1,0 +1,110 @@
+body{
+    background: rgb(43,56,77);
+}
+
+#main-container{
+    width: 200px;
+    margin: 100px auto;
+}
+
+#hamburger button{
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+}
+
+#hamburger button span{
+    border-radius: 5px;
+    background: white;
+    display: block;
+    width: 60%;
+    margin: 5px auto;
+    height: 2px;
+
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#hamburger button.open .top-line{
+    animation-name: top-line-animation;
+}
+#hamburger button.open .middle-line{
+    animation-name: middle-line-animation;
+}
+#hamburger button.open .bottom-line{
+    animation-name: bottom-line-animation;
+}
+#hamburger button .top-line{
+    animation-name: top-line-animation-close;
+}
+#hamburger button .middle-line{
+    animation-name: middle-line-animation-close;
+}
+#hamburger button .bottom-line{
+    animation-name: bottom-line-animation-close;
+}
+
+@keyframes top-line-animation{
+
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+}
+@keyframes bottom-line-animation{
+
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+}
+@keyframes middle-line-animation{
+
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes top-line-animation-close{
+
+    0%{
+        margin: 0 auto;
+        transform: translateY(2px) rotate(-45deg);
+    }
+
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes middle-line-animation-close{
+
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    20%, 100%{
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1;
+    }
+}
+
+@keyframes bottom-line-animation-close{
+
+    0%{
+        margin: 0 auto;
+        transform: translateY(-2px) rotate(45deg);
+    }
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}

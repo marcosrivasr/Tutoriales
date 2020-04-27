@@ -1,0 +1,81 @@
+<% include partials/_header %>
+
+
+
+    <div class="container-fluid">
+        <div class="row mt-5">
+
+
+
+            <div class="col-lg-7">
+                <table class="table tabel-hover">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Dirección</th>
+                            <th>Telefono</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (data) { %>
+                            <% for (var i=0; i < data.length; i++) {%>
+                                <tr>
+                                    <td>
+                                        <%= (i+1) %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].id %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].nombre %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].direccion %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].telefono %>
+                                    </td>
+                                    <td>
+                                        <a href="/delete/<%= data[i].id %>" class="btn btn-danger">Eliminar</a>
+                                        <a href="/update/<%= data[i].id %>" class="btn btn-info">Actualizar</a>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <% } %>
+                                    <% } %>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/add" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="direccion" placeholder="Dirección">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="telefono" placeholder="Telefono">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <% include partials/_footer %>

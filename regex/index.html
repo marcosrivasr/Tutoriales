@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expresiones regulares</title>
+    <style>
+        body{font-family: Arial, Helvetica, sans-serif;}
+        #container{width: 500px; margin: 0 auto;}
+        #container input{width: 100%; font-size: 28px; padding: 10px;}
+        button{padding: 10px; font-size: 24px}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="text" name="campo" id="campo" multiple>
+        <button id="button">Comprobar</button>
+    </div>
+
+    <script>
+        const campo = document.querySelector('#campo');
+        const button = document.querySelector('#button');
+
+        button.addEventListener('click', e =>{
+            //const regex = /[0-9]{3}/g; //buscar 3 números
+            //const regex = /sol/g;
+            //const regex = /^[\s]*(.*?)[\s]*$/; //regrese cadenas de texto sin espacios en blanco al inicio y final
+            //const regex = /<([a-z0-6]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)/; // etiquetas HTML
+            //const regex = /\B#(?:[a-f0-9A-F]{6}|[a-f0-9A-F]{3})\b/; //color hexadecimal #fff o #ffffff
+            //const regex = /\b[\w.!#$%&*+\/=?{|}]+@[\w-]+(?:\.[\w]+)+\b/; //email
+            //const regex = /^[a-z0-9_-]{3,16}$/; //nombre de usuario
+            const regex = /(?=^.{6,}$)((?=.*\w)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[|!"$%&\/\(\)\?\^\'\\\+\-\*]))^.*/; //password: 1 mayuscula, 1 minuscula, 1 número y 1 caracter especial
+            const validation = campo.value.match(regex);
+            console.log(validation);
+        });
+        
+    </script>
+</body>
+</html>
