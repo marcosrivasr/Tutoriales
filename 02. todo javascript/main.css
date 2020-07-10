@@ -1,0 +1,114 @@
+*{
+    font-family: 'Oxygen', sans-serif;
+}
+
+body{
+    background-color: skyblue;
+}
+main{
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 500px;
+    font-size: 18px;
+}
+input, button, select{
+    font-size: 18px;
+}
+h1{
+    padding: 30px 20px 20px 20px;
+}
+
+h3{
+    margin: 0;
+    padding: 10px 0;
+}
+
+#todos{
+    padding: 20px;
+}
+
+.todo{
+    border-radius: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.todo:hover{
+    background-color: rgb(255, 215, 211);
+}
+
+.todo .checkbox-container{
+    width: calc(100% - 36px);
+}
+.todo button{
+    border: none;
+    background: none;
+    background-image: url(delete.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+.todo button:hover svg{
+    fill: rgb(255, 137, 124);
+}
+
+
+#lists{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+#lists .list{
+    background-color: rgb(255, 137, 124);
+    width: 100%;
+    height: 100px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 10px;
+    margin-right: 10px;
+}
+
+#add-container{
+    background-color: #eee;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 10px;
+}
+#add-container form{
+    display: flex;
+    align-items: baseline;
+}
+#add-container form select{
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    outline: none;
+}
+#add-container form input{
+    padding: 10px 0;
+    width: 70%;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+#add-container form::before{
+    content: '';
+    width: 10px;
+    font-weight: bolder;
+    margin-right: 10px;
+    height: 10px;
+    border: solid #aaa;
+    border-width: 0 3px 3px 0;
+    transform: rotate(-45deg);
+}
+#add-container form select{
+    width: 30%;
+    justify-content: flex-end;
+    margin-left: 10px;
+}

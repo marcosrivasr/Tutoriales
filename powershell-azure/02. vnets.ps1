@@ -1,0 +1,2 @@
+Connect-AzureRmAccount
+Get-AzureRmResource

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main-container{
+            display: grid;
+            /*grid-template-columns: 1fr 2fr 1fr 1fr;
+            grid-template-rows: repeat(3, 33%); */
+            grid-template: repeat(3, 33%) / 1fr 2fr 1fr 1fr;
+
+            /*column-gap: 10px;
+            row-gap: 10px;*/
+            gap: 10px 10px;
+
+            /*justify-items: center;*/ /* alinea a nivel de rows - horizontal */
+            /*align-items: center;*/ /*vertical*/
+            place-items: center center;
+
+
+            border: solid 1px #000;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+
+        }
+
+        .item{
+            border: solid 1px #000;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <div class="item">Hola</div>
+        <div class="item">Mi</div>
+        <div class="item">Nombre</div>
+        <div class="item">Es</div>
+        <div class="item">Marcos</div>
+    </div>
+</body>
+</html>
