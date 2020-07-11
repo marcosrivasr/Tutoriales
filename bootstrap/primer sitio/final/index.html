@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Crossing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -11,10 +13,10 @@
     
 
 
-    <nav class="navbar navbar-expand-md navbar-light" id="navbar">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="" width="100">
+                <img src="img/logo.jpg" alt="" width="200">
             </a>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +61,7 @@
             
             <div class="col-sm p-3 text-light text-center">
               <p class="text-warning h3">Today is</p>
-              <h4 class="h2">Samson's Birthday</h4>
+              <h4 class="h2 text-shadow">Samson's Birthday</h4>
             </div>
           </div><!-- SLIDE-->
         </div>
@@ -146,32 +148,36 @@
             </div>
             <div class="row py-5">
               <div class="col text-center">
-                <button class="btn btn-primary btn-warning btn-lg p-3">View Amiibo catalog</button>
+                <a href="#" class="link-dark">
+                  <button class="btn btn-warning btn-lg rounded-pill p-3 font-weight-bold">View Amiibo catalog</button>
+                </a>
+                
               </div>
                 
             </div>
         </div>
+        <div id="separator-amiibos-footer">
+        </div>
     </div>
-    <div id="separator-amiibos-footer">
-      <div class="content"></div>
-    </div>
+    
 
   <!-- Play Nintendo-->
-    <div class="container p-5">
-      <h3 class="text-center">Isabelle and friends on Play Nintendo</h3>
+  <div id="play" >
+    <div class="container-sm p-5">
+      <h3 class="text-center h1">Isabelle and friends on Play Nintendo</h3>
       <div class="row justify-content-center align-items-center">
-        <div class="col-3">
+        <div class="col-3 d-none d-md-block">
           <img src="img/isabelle.png" class="w-100">
         </div>
         <div class="col-9">
-          <div class="row row-cols-1 row-cols-md-2 justify-content-md-center">
-            <div class="col col-lg-4 p-1">
+          <div class="row justify-content-md-center">
+            <div class="col p-1">
               <div class="card bg-primary text-white">   
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="..."  alt="...">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="img/ph-01.jpg" class="w-100"  alt="...">
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-6">
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">This is a wider card with supporting text below.</p>
@@ -181,30 +187,30 @@
               </div><!--CARD-->
             </div><!--col-->
             
-            <div class="col col-lg-4 p-1">
+            <div class="col p-1">
               <div class="card bg-warning text-white">   
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="..."  alt="...">
-                  </div>
-                  <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-6">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
+                      <h5 class="card-title">Card title 2</h5>
                       <p class="card-text">This is a wider card with supporting text below.</p>
                     </div><!--card-body-->
+                  </div>
+                  <div class="col-md-6">
+                    <img src="img/ph-02.jpg" class="w-100"  alt="...">
                   </div><!--col-->
                 </div><!--row-->
               </div><!--CARD-->
             </div>
           </div>
-        <div class="row row-cols-1 row-cols-md-2 justify-content-md-center">
-          <div class="col col-lg-4 p-1">
+        <div class="row  justify-content-md-center">
+          <div class="col p-1">
             <div class="card bg-danger text-white">   
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="..."  alt="...">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="img/ph-03.jpg" class="w-100"  alt="...">
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-6">
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">This is a wider card with supporting text below.</p>
@@ -213,17 +219,17 @@
                 </div><!--row-->
               </div><!--CARD-->
           </div>
-          <div class="col col-lg-4 p-1">
+          <div class="col p-1">
             <div class="card bg-success text-white">   
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="..."  alt="...">
-                  </div>
-                  <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-6">
                     <div class="card-body">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">This is a wider card with supporting text below.</p>
                     </div><!--card-body-->
+                  </div>
+                  <div class="col-md-6">
+                    <img src="img/ph-04.jpg" class="w-100"  alt="...">
                   </div><!--col-->
                 </div><!--row-->
               </div><!--CARD-->
@@ -232,16 +238,21 @@
         </div>
       </div>
     </div>
+  </div>
+    
 
     <div id="footer" class="p-5">
-      <div class="container w-50">
-        <div class="row justify-content-md-center">
-          <div class="col-6">
-            <button class="btn btn-primary w-100 p-3">Customer Support</button>
+      <div class="container w-50 pt-5">
+        <div class="row row-cols-md-2 justify-content-md-center">
+          <div class="col text-center">
+            <a href="#">
+              <button class="btn btn-lg rounded-pill btn-warning w-100  p-3 shadow-sm font-weight-bold">Customer Support</button>
+            </a>
+            
           </div>
         </div>
         <div class="row justify-content-md-center py-5">
-          <div class="col text-center">
+          <div class="col text-center font-weight-light">
             <p>For Nintendo 3DS systems, use Parental Controls to restrict 3D mode for children 6 and under.</p>
             <p>Internet access required for online features. For more info, go to support.nintendo.com.</p>
             <p>Games and amiibo accessories sold separately. Figures shown not actual size. Compatibility and functionality of amiibo may vary per game. Visit amiibo.com for specific details on how each amiibo works.</p>
