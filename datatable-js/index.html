@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table id="tabla01">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Status</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="available"></span></td>
+                <td>Marcos Rivas</td>
+                <td>CEO</td>
+                <td>San Francisco</td>
+                <td>28</td>
+                <td>2020/05/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="away"></span></td>
+                <td>Lena Sanchez</td>
+                <td>CIO</td>
+                <td>Florida</td>
+                <td>29</td>
+                <td>2020/07/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="offline"></span></td>
+                <td>Juan Perez</td>
+                <td>CMO</td>
+                <td>Mexico</td>
+                <td>25</td>
+                <td>2019/05/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="available"></span></td>
+                <td>Alma Mater</td>
+                <td>Subdirector TI</td>
+                <td>Seattle</td>
+                <td>28</td>
+                <td>2020/05/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="available"></span></td>
+                <td>Catalina Creel</td>
+                <td>HR Director</td>
+                <td>Sevilla</td>
+                <td>42</td>
+                <td>2020/12/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="away"></span></td>
+                <td>Sergio Corona</td>
+                <td>CEO</td>
+                <td>San Francisco</td>
+                <td>28</td>
+                <td>2020/05/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="away"></span></td>
+                <td>Mateo Vinicius</td>
+                <td>CEO</td>
+                <td>San Francisco</td>
+                <td>33</td>
+                <td>2020/05/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="available"></span></td>
+                <td>Sofia Rivera</td>
+                <td>CEO</td>
+                <td>San Francisco</td>
+                <td>26</td>
+                <td>2020/05/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="offline"></span></td>
+                <td>Agustin Lara</td>
+                <td>CEO</td>
+                <td>San Francisco</td>
+                <td>54</td>
+                <td>2020/05/01</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+                <td><span class="offline"></span></td>
+                <td>Mon Laferte</td>
+                <td>CEO</td>
+                <td>Sillicon Valley</td>
+                <td>34</td>
+                <td>2020/05/01</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <script src="main.js"></script>
+
+    <script>
+        const datatable = new DataTable('#tabla01', [
+            {
+                id: 'bAdd',
+                text: 'Añadir',
+                icon: 'add_circle',
+                action: function(){
+                    datatable.add(['offline', 'Juan Escutia', 'Engineer', 'Mexico City', '28', '2019/10/20']);
+                }
+            },
+            {
+                id: 'bRemove',
+                icon: 'delete',
+                text: 'Eliminar',
+                action: function(){
+                    console.log('eliminar');
+                }
+            }
+        ]);
+
+        datatable.parse();
+    </script>
+</body>
+</html>
