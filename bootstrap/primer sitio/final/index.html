@@ -6,20 +6,27 @@
     <title>Animal Crossing</title>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     
 
-
-    <nav class="navbar navbar-expand-sm navbar-dark bg-danger" id="navbar">
+  <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-danger" 
+          id="navbar"> 
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="img/logo.jpg" alt="" width="200">
             </a>
             
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-toggle="collapse" 
+                    data-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -67,18 +74,22 @@
         </div>
     </div><!-- RIBBON-->
 
+    <!-- SEPARATOR RIBBON-->
     <div id="separator-ribbon">
       <div class="content bg-warning"></div>
     </div>
 
+    <!-- GAMES-->
     <div id="games">
       <div class="container-md p-5">
+        
         <div class="row pt-5">
             <h3 class="text-center pb-5 pt-5 h1">Featured Animal Crossing games</h3>
         </div>
+
         <div class="row">
             <div class="col-sm">
-                <div class="card w-100 card-border">
+                <div class="card w-100 card-border mb-5">
                     <img src="img/card01.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -86,7 +97,7 @@
                   </div>
             </div>
             <div class="col-sm">
-                <div class="card w-100 card-border">
+                <div class="card w-100 card-border mb-5">
                     <img src="img/card02.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -94,7 +105,7 @@
                   </div>
             </div>
             <div class="col-sm">
-                <div class="card w-100 card-border">
+                <div class="card w-100 card-border mb-5">
                     <img src="img/card03.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -123,38 +134,39 @@
     <div id="separator-amiibos">
       <div class="content bg-success"></div>
     </div>
+    
     <div id="amiibos" class="px-5 pb-5 bg-success">
-        <div class="container-md">
-            <div class="row">
-                <h2 class="text-center text-white text-shadow h1">Featured Amiibo™ figures</h2>
-            </div>
-            <div class="row row-cols-1 row-cols-2 row-cols-sm-2 row-cols-md-4">
-                <div class="col-sm">
-                  <img src="img/figure01.png" alt="" class="w-100 amiibo">
-                  <div class="text-center"><span class="amiibo-name h5 p-2">Isabelle</span></div>
-                </div>
-                <div class="col-sm">
-                  <img src="img/figure02.png" alt="" class="w-100 amiibo">
-                  <div class="text-center"><span class="amiibo-name h5 p-2">Kapp'n</span></div>
-                </div>
-                <div class="col-sm">
-                  <img src="img/figure03.png" alt="" class="w-100 amiibo">
-                  <div class="text-center"><span class="amiibo-name h5 p-2">Rover</span></div>
-                </div>
-                <div class="col-sm">
-                  <img src="img/figure04.png" alt="" class="w-100 amiibo">
-                  <div class="text-center"><span class="amiibo-name h5 p-2">Timmy & Tommy</span></div>
-                </div>
-            </div>
-            <div class="row py-5">
-              <div class="col text-center">
-                <a href="#" class="link-dark">
-                  <button class="btn btn-warning btn-lg rounded-pill p-3 font-weight-bold">View Amiibo catalog</button>
-                </a>
-                
+        <div class="container">
+          <div class="row">
+            <h2 class="text-center text-white text-shadow h1">Featured Amiibo™ figures</h2>
+          </div>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
+              <div class="col-sm">
+                <img src="img/figure01.png" alt="" class="w-100 amiibo">
+                <div class="text-center"><span class="amiibo-name h5 p-2">Isabelle</span></div>
               </div>
-                
+              <div class="col-sm">
+                <img src="img/figure02.png" alt="" class="w-100 amiibo">
+                <div class="text-center"><span class="amiibo-name h5 p-2">Kapp'n</span></div>
+              </div>
+              <div class="col-sm">
+                <img src="img/figure03.png" alt="" class="w-100 amiibo">
+                <div class="text-center"><span class="amiibo-name h5 p-2">Rover</span></div>
+              </div>
+              <div class="col-sm">
+                <img src="img/figure04.png" alt="" class="w-100 amiibo">
+                <div class="text-center"><span class="amiibo-name h5 p-2">Timmy & Tommy</span></div>
+              </div>
+          </div>
+          <div class="row py-5">
+            <div class="col text-center">
+              <a href="#" class="link-dark">
+                <button class="btn btn-warning btn-lg rounded-pill p-3 font-weight-bold">View Amiibo catalog</button>
+              </a>
+              
             </div>
+              
+          </div>
         </div>
         <div id="separator-amiibos-footer">
         </div>
@@ -164,7 +176,10 @@
   <!-- Play Nintendo-->
   <div id="play" >
     <div class="container-sm p-5">
+      <div class="row">
       <h3 class="text-center h1">Isabelle and friends on Play Nintendo</h3>
+
+      </div>
       <div class="row justify-content-center align-items-center">
         <div class="col-3 d-none d-md-block">
           <img src="img/isabelle.png" class="w-100">
@@ -266,7 +281,7 @@
     
 
     
-<script src="popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </body>
 </html>

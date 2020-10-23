@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+:root{
+    font-size: 16px;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(100, 30, 40);
+}
+#container{
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    width: 400px;
+    margin: 0 auto;
+    padding:1rem;
+}
+
+#container input, 
+#container label, 
+#container button{
+    display: block;
+    font-size: 1.5rem;
+}
+
+#container label{
+    padding: 0.5rem 0;
+}
+#container input, #container select{
+    width: 100%;
+    padding: 1rem;
+}
+#container button{
+    margin: 1rem auto;
+}
+
+#container #res{
+    background-color: #ddd;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+}

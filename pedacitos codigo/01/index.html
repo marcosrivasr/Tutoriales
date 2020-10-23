@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedacitos de código</title>
+    <style>
+        label{
+            display: block;
+        }
+
+        fieldset:focus-within, section:focus-within{
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" autocomplete="off">
+        <fieldset>
+            <legend>Usuario</legend>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" autocomplete="off" />
+
+            <label for="email">Correo</label>
+            <input type="text" name="email" id="email" autocomplete="off">
+        </fieldset>
+
+        <fieldset>
+            <legend>Lenguaje</legend>
+            <label for="name">Nombre</label>
+            <select name="language" id="language">
+                <option value="js">Javascript</option>
+                <option value="py">Python</option>
+                <option value="php">PHP</option>
+            </select>
+        </fieldset>
+
+        <section>
+            <label for="experience">Años de experiencia</label>
+            <input type="radio" name="exp" id="exp"> 0 - 2 años
+            <input type="radio" name="exp" id="exp2"> 2 - 5 años
+            <input type="radio" name="exp" id="exp3"> 5 - 10 años
+        </section>
+    </form>
+</body>
+</html>
