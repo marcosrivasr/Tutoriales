@@ -1,0 +1,57 @@
+#bar{
+    background-color: #eee;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    margin-right: -5px;
+    padding: 7px;
+    width: 100%;
+    min-width: 300px;
+}
+
+#bar:hover{
+    background-color: white;
+}
+
+#bar .section{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#bar .section.photo{
+    width: 35px;
+}
+
+#bar .section.text{
+    width: calc(100% - 35px - 114px - 15px);
+}
+
+#bar .section.buttons{
+    padding-left: 7px;
+    width: 114px;
+}
+
+#bar .section.photo img{
+    border-radius: 50%;
+    width: 100%;
+    padding-right: 7px;
+}
+
+#bar .section input[type="text"]{
+    border: 0;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    width: 100%;
+}
+
+#bar .section button{
+    background: transparent;
+    border: 0;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#bar .section button:hover{
+    color: #000;
+}

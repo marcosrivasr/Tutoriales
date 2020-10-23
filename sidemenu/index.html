@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side menu</title>
+    <link rel="stylesheet" href="sidemenu.css">
+</head>
+<body class="body-expanded">
+    <div id="sidemenu" class="menu-expanded">
+        <!-- HEADER -->
+        <div id="header">
+            <div id="title"><span>Vida MRR</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+                <div class="btn-hamburger"></div>
+            </div>
+        </div>
+        
+        <!-- PROFILE -->
+        <div id="profile">
+            <div id="photo"><img src="photo.jpg" alt=""></div>
+
+            <div id="name"><span>Marcos Rivas</span></div>
+        </div>
+
+        <!-- ITEMS -->
+        
+        <div id="menu-items">
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="icons/cloud-services.png" alt=""> </div>
+                    <div class="title"><span>Cloud Services</span></div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="icons/disk.png" /></div>
+                    <div class="title"><span>Disks</span></div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="icons/function.png" /></div>
+                    <div class="title"><span>Function Apps</span></div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="icons/mesh-app.png" /></div>
+                    <div class="title"><span>Mesh Applications</span></div>
+                </a>
+            </div>
+
+            <div class="item separator">   
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="icons/kubernetes-service.png" /></div>
+                    <div class="title"><span>Kubernetes Service</span></div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="icons/container-registries.png" /></div>
+                    <div class="title"><span>Container Registries</span></div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="icons/container-instances.png" /></div>
+                    <div class="title"><span>Container Instances</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container">
+        Hola a todos
+    </div>
+
+    <script>
+        const btn = document.querySelector('#menu-btn');
+        const menu = document.querySelector('#sidemenu');
+        btn.addEventListener('click', e =>{
+            menu.classList.toggle("menu-expanded");
+            menu.classList.toggle("menu-collapsed");
+
+            document.querySelector('body').classList.toggle('body-expanded');
+        });
+    </script>
+</body>
+</html>

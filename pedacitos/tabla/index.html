@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+
+:root{
+    --bg-color: #135eaa;
+    --highlight: #268aed;
+    --cell-color: #eee;
+    --cell-border: #ccc;
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-spacing: 10px;
+    border-collapse: collapse;
+    border: solid 1px var(--cell-border);
+    margin: 0 auto;
+}
+
+table td, table th{
+    padding: 10px;
+}
+
+table tbody tr:hover{
+    background-color: var(--highlight);
+    color: white;
+}
+
+table thead, table tfoot{
+    background-color: var(--bg-color);
+    color: white;
+    font-weight: bolder;
+}
+
+table td:nth-child(2), table td:nth-child(3){
+    text-align: right;
+}
+
+table tr:nth-child(even){
+    background-color: var(--cell-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+
+
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>País</th>
+            <th>Población (millones)</th>
+            <th>% mundial</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>China</td>
+            <td>1,395</td>
+            <td>19.15</td>
+        </tr>
+        <tr>
+            <td>India</td>
+            <td>1,375</td>
+            <td>17.86</td>
+        </tr>
+        <tr>
+            <td>Estados Unidos</td>
+            <td>329</td>
+            <td>4.45</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>3,099</td>
+            <td>37.01</td>
+        </tr>
+    </tfoot>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

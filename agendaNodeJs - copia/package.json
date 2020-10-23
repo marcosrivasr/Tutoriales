@@ -1,0 +1,23 @@
+{
+    "name": "agendaNodeJs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^2.6.2",
+        "express": "^4.17.1",
+        "express-myconnection": "^1.0.4",
+        "mariadb": "^2.1.0",
+        "morgan": "^1.9.1",
+        "mysql": "^2.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.1"
+    }
+}
