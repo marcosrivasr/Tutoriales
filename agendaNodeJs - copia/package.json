@@ -11,7 +11,7 @@
     "license": "ISC",
     "dependencies": {
         "ejs": "^2.6.2",
-        "express": "^4.17.1",
+        "express": "^4.18.2",
         "express-myconnection": "^1.0.4",
         "mariadb": "^2.1.0",
         "morgan": "^1.9.1",
